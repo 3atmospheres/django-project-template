@@ -4,7 +4,7 @@ Installation
 
 To start a new project with this template::
 
-    django-admin.py startproject --template=https://github.com/3atmospheres/django-project-template/zipball/master --extension=py,md,txt <project_name>
+    django-admin.py startproject --template=https://github.com/3atmospheres/django_project_template/zipball/master --extension=py,md,txt <project_name>
 
 {% endif %}
 {{ project_name|title|lower }}
