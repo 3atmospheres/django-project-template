@@ -1,6 +1,8 @@
 {{ project_name|title|lower }}
 ========================
 
+django-admin.py startproject --template=https://github.com/3atmospheres/django-project-template/archive/master.zip --extension=py,rst,html your_awesome_project_name
+
 Getting Started
 ---------------
 
