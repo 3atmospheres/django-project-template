@@ -1,7 +1,7 @@
-{% extends "base.html" %}
+{% templatetag openblock %} extends "base.html" {% templatetag closeblock %}
 
-{% block title %}404 - Page Not Found{% endblock %}
+{% templatetag openblock %} block title {% templatetag closeblock %}404 - Page Not Found{% templatetag openblock %} endblock {% templatetag closeblock %}
 
-{% block content %}
+{% templatetag openblock %} block content {% templatetag closeblock %}
   <h1>404 Page not found</h1>
-{% endblock %}
+{% templatetag openblock %} endblock {% templatetag closeblock %}
