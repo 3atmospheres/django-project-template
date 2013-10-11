@@ -30,6 +30,9 @@ pip-log.txt
 *.pyc
 
 # Project specific
+media/
+assets/CACHE/
+static/
 src/
 
 # Mac OS X specific

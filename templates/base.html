@@ -1,0 +1,45 @@
+{% templatetag openblock %}load url from future {% templatetag closeblock %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{% templatetag openblock %} block title {% templatetag closeblock %}{{ project_name }}{% templatetag openblock %} endblock {% templatetag closeblock %}</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+
+    {% templatetag openblock %} load static {% templatetag closeblock %}
+    <link rel="shortcut icon" href="{% templatetag openblock %} static "img/favicon.ico" {% templatetag closeblock %}">
+    {% templatetag openblock %} load compress {% templatetag closeblock %}
+    {% templatetag openblock %} compress css {% templatetag closeblock %}
+    <link rel="stylesheet" href="{% templatetag openblock %} static "less/bootstrap.less" {% templatetag closeblock %}" type="text/less" media="all" charset="utf-8">
+    {% templatetag openblock %} endcompress {% templatetag closeblock %}
+    {% templatetag openblock %} block extra_head {% templatetag closeblock %}{% templatetag openblock %} endblock {% templatetag closeblock %}
+  </head>
+
+  <body class="{% templatetag openblock %} block body_class {% templatetag closeblock %}{% templatetag openblock %} endblock body_class {% templatetag closeblock %}">
+    {% templatetag openblock %} block content {% templatetag closeblock %}
+    {% templatetag openblock %} endblock content {% templatetag closeblock %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    {% templatetag openblock %} compress js {% templatetag closeblock %}
+    <script src="{% templatetag openblock %} static "js/bootstrap/affix.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/alert.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/button.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/carousel.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/collapse.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/dropdown.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/modal.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/scrollspy.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/tab.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/tooltip.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/popover.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/transition.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/app.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    {% templatetag openblock %} endcompress {% templatetag closeblock %}
+    {% templatetag openblock %} block extra_body {% templatetag closeblock %}{% templatetag openblock %} endblock extra_body {% templatetag closeblock %}
+  </body>
+</html>

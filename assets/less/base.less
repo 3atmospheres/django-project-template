@@ -1,0 +1,33 @@
+// base.less
+// Custom site styling
+// --------------------
+
+// LAYOUT
+// ------
+
+body {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  outline: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: @container-tablet) {
+
+  // UNFIX THE TOPBAR
+  // ----------------
+  // Remove any padding from the body
+  body {
+    padding-top: 0;
+  }
+}
