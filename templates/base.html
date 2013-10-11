@@ -12,10 +12,10 @@
     <link rel="dns-prefetch" href="//ajax.googleapis.com">
 
     {% templatetag openblock %} load static {% templatetag closeblock %}
-    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
-    {% load compress %}
+    <link rel="shortcut icon" href="{% templatetag openblock %} static "img/favicon.ico" {% templatetag closeblock %}">
+    {% templatetag openblock %} load compress {% templatetag closeblock %}
     {% templatetag openblock %} compress css {% templatetag closeblock %}
-    <link rel="stylesheet" href="{% static "less/bootstrap.less" %}" type="text/less" media="all" charset="utf-8">
+    <link rel="stylesheet" href="{% templatetag openblock %} static "less/bootstrap.less" {% templatetag closeblock %}" type="text/less" media="all" charset="utf-8">
     {% templatetag openblock %} endcompress {% templatetag closeblock %}
     {% templatetag openblock %} block extra_head {% templatetag closeblock %}{% templatetag openblock %} endblock {% templatetag closeblock %}
   </head>
