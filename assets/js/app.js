@@ -34,3 +34,7 @@ var App = {
   pageAnotherPageAgain: function() {
   }
 }
+
+$(document).ready(function() {
+    App.init();
+});
