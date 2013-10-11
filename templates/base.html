@@ -1,40 +1,45 @@
-{% load url from future %}
+{% templatetag openblock %}load url from future {% templatetag closeblock %}
 <!doctype html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>{% block title %}{% endblock %}</title>
+    <title>{% templatetag openblock %} block title {% templatetag closeblock %}{{ project_name }}{% templatetag openblock %} endblock {% templatetag closeblock %}</title>
 
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
 
-  {% load static %}
-  <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
-  {% load compress %}
-  {% compress css %}
-  <link rel="stylesheet" href="{% static "less/normalize.less" %}" type="text/less" media="all" charset="utf-8">
-  <link rel="stylesheet" href="{% static "less/base.less" %}" type="text/less" media="all" charset="utf-8">
-  {% endcompress %}
-  {% block extra_head %}{% endblock %}
-</head>
+    {% templatetag openblock %} load static {% templatetag closeblock %}
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+    {% load compress %}
+    {% templatetag openblock %} compress css {% templatetag closeblock %}
+    <link rel="stylesheet" href="{% static "less/bootstrap.less" %}" type="text/less" media="all" charset="utf-8">
+    {% templatetag openblock %} endcompress {% templatetag closeblock %}
+    {% templatetag openblock %} block extra_head {% templatetag closeblock %}{% templatetag openblock %} endblock {% templatetag closeblock %}
+  </head>
 
-<body class="{% block body_class %}{% endblock %}">
-  {% block content %}
-  {% endblock %}
+  <body class="{% templatetag openblock %} block body_class {% templatetag closeblock %}{% templatetag openblock %} endblock body_class {% templatetag closeblock %}">
+    {% templatetag openblock %} block content {% templatetag closeblock %}
+    {% templatetag openblock %} endblock content {% templatetag closeblock %}
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
-  {% block extra_body %}{% endblock %}
-  {% compress js %}
-  <script src="{% static "js/app.js" %}" type="text/javascript" charset="utf-8"></script>
-  {% endcompress %}
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      App.init();
-    });
-  </script>
-</body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    {% templatetag openblock %} compress js {% templatetag closeblock %}
+    <script src="{% templatetag openblock %} static "js/bootstrap/affix.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/alert.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/button.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/carousel.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/collapse.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/dropdown.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/modal.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/scrollspy.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/tab.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/tooltip.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/popover.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/bootstrap/transition.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% templatetag openblock %} static "js/app.js" {% templatetag closeblock %}" type="text/javascript" charset="utf-8"></script>
+    {% templatetag openblock %} endcompress {% templatetag closeblock %}
+    {% templatetag openblock %} block extra_body {% templatetag closeblock %}{% templatetag openblock %} endblock extra_body {% templatetag closeblock %}
+  </body>
 </html>
