@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% templatetag openblock %} extends "base.html" {% templatetag closeblock %}
 
-{% block content %}
-{% endblock %}
+{% templatetag openblock %} block content {% templatetag closeblock %}
+{% templatetag openblock %} endblock {% templatetag closeblock %}
